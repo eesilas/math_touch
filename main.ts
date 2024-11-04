@@ -27,6 +27,9 @@ keyboard.kbEvent(KeyValue.key0, function () {
     radio.sendNumber(0)
 })
 function init () {
+    keyboard.vibrationMotor(OnOff.ON)
+    basic.pause(500)
+    keyboard.vibrationMotor(OnOff.OFF)
     radio.setTransmitPower(7)
     radio.setGroup(111)
     keyboard.setBrightness(72)
