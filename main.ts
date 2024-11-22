@@ -20,6 +20,7 @@ keyboard.kbEvent(KeyValue.key1, function () {
     keyboard.ledBlank()
 })
 keyboard.kbEvent(KeyValue.keyminus, function () {
+    keyboard.ServoRun(keyboard.aServos.S1, 90)
     radio.sendNumber(11)
     basic.showString("-")
     keyboard.setIndexColor(11, 0xff00ff)
@@ -85,6 +86,7 @@ keyboard.kbEvent(KeyValue.key6, function () {
     keyboard.ledBlank()
 })
 keyboard.kbEvent(KeyValue.keymul, function () {
+    keyboard.ServoRun(keyboard.aServos.S1, 180)
     radio.sendNumber(12)
     basic.showString("x")
     keyboard.setIndexColor(12, 0x00ff00)
@@ -106,6 +108,7 @@ keyboard.kbEvent(KeyValue.keydf, function () {
     keyboard.ledBlank()
 })
 keyboard.kbEvent(KeyValue.keyplus, function () {
+    keyboard.ServoRun(keyboard.aServos.S1, 0)
     radio.sendNumber(10)
     basic.showString("+")
     keyboard.setIndexColor(10, 0xff9da5)
