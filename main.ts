@@ -13,10 +13,25 @@ keyboard.kbEvent(KeyValue.key1, function () {
     basic.showString("1")
     keyboard.setIndexColor(1, 0xff0000)
 })
+keyboard.kbEvent(KeyValue.keyminus, function () {
+    radio.sendNumber(12)
+    basic.showString("-")
+    keyboard.setIndexColor(3, 0xff00ff)
+})
 keyboard.kbEvent(KeyValue.key5, function () {
     radio.sendNumber(5)
     basic.showString("5")
     keyboard.setIndexColor(5, 0xb09eff)
+})
+keyboard.kbEvent(KeyValue.keydiv, function () {
+    radio.sendNumber(14)
+    basic.showString("-")
+    keyboard.setIndexColor(3, 0xff00ff)
+})
+keyboard.kbEvent(KeyValue.keyequal, function () {
+    radio.sendNumber(15)
+    basic.showString("=")
+    keyboard.setIndexColor(3, 0xffff00)
 })
 function rest () {
     for (let index = 0; index <= 9; index++) {
@@ -53,6 +68,11 @@ keyboard.kbEvent(KeyValue.key6, function () {
     basic.showString("6")
     keyboard.setIndexColor(6, 0x00ffff)
 })
+keyboard.kbEvent(KeyValue.keymul, function () {
+    radio.sendNumber(13)
+    basic.showString("-")
+    keyboard.setIndexColor(3, 0x00ff00)
+})
 keyboard.kbEvent(KeyValue.key3, function () {
     radio.sendNumber(3)
     basic.showString("3")
@@ -60,6 +80,11 @@ keyboard.kbEvent(KeyValue.key3, function () {
 })
 keyboard.kbEvent(KeyValue.keydf, function () {
     rest()
+})
+keyboard.kbEvent(KeyValue.keyplus, function () {
+    radio.sendNumber(11)
+    basic.showString("+")
+    keyboard.setIndexColor(3, 0xff9da5)
 })
 keyboard.kbEvent(KeyValue.key2, function () {
     radio.sendNumber(2)
