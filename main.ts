@@ -18,6 +18,12 @@ keyboard.kbEvent(KeyValue.key5, function () {
     radio.sendNumber(5)
     basic.showNumber(5)
 })
+function rest () {
+    for (let index = 0; index <= 9; index++) {
+        keyboard.setIndexColor(index, keyboard.rgb(0, 0, 0))
+        keyboard.showColor(index)
+    }
+}
 keyboard.kbEvent(KeyValue.key9, function () {
     keyboard.setIndexColor(9, 0x7f00ff)
     radio.sendNumber(9)
@@ -36,7 +42,7 @@ keyboard.kbEvent(KeyValue.key0, function () {
 function init () {
     basic.showIcon(IconNames.Duck)
     keyboard.vibrationMotor(OnOff.ON)
-    basic.pause(500)
+    basic.pause(200)
     keyboard.vibrationMotor(OnOff.OFF)
     radio.setTransmitPower(7)
     radio.setGroup(111)
@@ -60,10 +66,7 @@ keyboard.kbEvent(KeyValue.key3, function () {
     basic.showNumber(3)
 })
 keyboard.kbEvent(KeyValue.keydf, function () {
-    for (let index = 0; index <= 9; index++) {
-        keyboard.setIndexColor(index, keyboard.rgb(0, 0, 0))
-        keyboard.showColor(index)
-    }
+    rest()
 })
 keyboard.kbEvent(KeyValue.key2, function () {
     keyboard.setIndexColor(2, 0xff8000)
