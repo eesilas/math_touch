@@ -35,7 +35,7 @@ keyboard.kbEvent(KeyValue.key5, function () {
 })
 keyboard.kbEvent(KeyValue.keydiv, function () {
     radio.sendNumber(13)
-    basic.showString("-")
+    basic.showString("/")
     keyboard.setIndexColor(13, 0xff00ff)
     basic.pause(100)
     keyboard.ledBlank()
@@ -92,7 +92,7 @@ keyboard.kbEvent(KeyValue.key6, function () {
 })
 keyboard.kbEvent(KeyValue.keymul, function () {
     radio.sendNumber(12)
-    basic.showString("-")
+    basic.showString("x")
     keyboard.setIndexColor(12, 0x00ff00)
     basic.pause(100)
     keyboard.ledBlank()
