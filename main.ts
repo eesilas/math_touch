@@ -47,12 +47,6 @@ keyboard.kbEvent(KeyValue.keyequal, function () {
     basic.pause(100)
     keyboard.ledBlank()
 })
-function rest () {
-    for (let index = 0; index <= 9; index++) {
-        keyboard.setIndexColor(index, keyboard.rgb(0, 0, 0))
-        keyboard.showColor(index)
-    }
-}
 keyboard.kbEvent(KeyValue.key9, function () {
     radio.sendNumber(9)
     basic.showString("9")
@@ -105,7 +99,11 @@ keyboard.kbEvent(KeyValue.key3, function () {
     keyboard.ledBlank()
 })
 keyboard.kbEvent(KeyValue.keydf, function () {
-    rest()
+    radio.sendNumber(15)
+    basic.showString("W")
+    keyboard.setIndexColor(15, 0xff00ff)
+    basic.pause(100)
+    keyboard.ledBlank()
 })
 keyboard.kbEvent(KeyValue.keyplus, function () {
     radio.sendNumber(10)
